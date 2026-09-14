@@ -56,6 +56,7 @@ analytics:
   script_url: "https://cloud.umami.is/script.js"
   website_id: "393f80fb-21e8-4579-be13-a0802c4c8320"
   domain: "xtanh.github.io"
+  share_url: "https://cloud.umami.is/share/Q4D9gh0iObk4vyzM"
 
 collections:
   - publications

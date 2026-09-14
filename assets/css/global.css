@@ -102,3 +102,17 @@ div.lazy {
     color: #6c757d;
     border-left: 3px solid #dee2e6;
 }
+
+.analytics-frame {
+    display: block;
+    width: 100%;
+    min-height: 900px;
+    border: 0;
+    background: #fff;
+}
+
+@media (max-width: 767.98px) {
+    .analytics-frame {
+        min-height: 1100px;
+    }
+}
