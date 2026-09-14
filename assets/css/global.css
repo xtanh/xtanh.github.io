@@ -67,3 +67,38 @@ div.lazy {
     font-family: Courier, monospace;
 }
 
+/* Blog posts use the same card-based visual language as the original site. */
+.blog-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.blog-content h2,
+.blog-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.blog-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.2rem;
+}
+
+.blog-content pre {
+    padding: 1rem;
+    overflow-x: auto;
+    color: #f8f9fa;
+    background: #212529;
+    border-radius: 0.25rem;
+}
+
+.blog-content code {
+    word-break: break-word;
+}
+
+.blog-content blockquote {
+    padding-left: 1rem;
+    color: #6c757d;
+    border-left: 3px solid #dee2e6;
+}

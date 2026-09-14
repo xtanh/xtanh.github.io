@@ -1,0 +1,23 @@
+---
+layout: default
+title: Privacy
+description: Analytics and privacy information for this website.
+permalink: /privacy/
+---
+
+<div class="row">
+    <div class="col">
+        <div class="card border-0 shadow-sm bg-white">
+            <div class="card-body p-4 p-md-5">
+                <h1 class="h2 mb-3">Privacy</h1>
+                {% if site.analytics.enabled %}
+                <p>This website uses Umami to collect aggregate traffic statistics, including visits, popular pages, referrers, devices, and approximate geographic region.</p>
+                <p>Umami does not place analytics cookies. Location is approximate and is used only for aggregate reporting.</p>
+                {% else %}
+                <p>Visitor analytics is currently disabled. When enabled, this website will use Umami for aggregate traffic and approximate geographic reporting without analytics cookies.</p>
+                {% endif %}
+                <p class="mb-0">Questions can be sent to <a href="mailto:{{ site.data.profile.email | encode_email }}">{{ site.data.profile.email | replace: "@", " (at) " }}</a>.</p>
+            </div>
+        </div>
+    </div>
+</div>

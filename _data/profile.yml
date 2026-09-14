@@ -1,61 +1,47 @@
-primary_name: "Hong"
-secondary_name: "Tan"
+primary_name: "Hong Tan"
+secondary_name: "谭洪"
 navbar_name: "Hong Tan"
 
-# positions:
-# - logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
-#   name: Position 1 with logo
-# - name: Position 2 without logo
-
-
 email: "tanhong818@sjtu.edu.cn"
-# cv_link: link-to-your-cv-file
-gscholar: xFmQpf4AAAAJ  # This is an example, replace it with your own Google Scholar ID
+gscholar: y9xtGIMAAAAJ
 github: xtanh
-twitter: your_twitter_id  # Do not include the '@' symbol
 wechat_qrcode: /assets/images/etc/wechat.jpg
 wechat_prompt: >-
   Please tell me your <strong>name</strong> and <strong>affiliation</strong> (current or past) when adding my wechat. Thanks!
-# linkedin: your-linked-in-id
 orcid: 0009-0008-8030-6670
 
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    I'm a master student at Shanghai Jiao Tong University, and I am honored to be supervised by <a href="https://xlab.sjtu.edu.cn" target="_blank">Professor Yi Xiong</a>.
-  </p>
-    I have a passion for great food and enjoy staying active. My personal best for a 5-kilometer run is 19 minutes. Now, I am taking time to reflect and grow. I also love connecting and engaging with people.
+    I am a first-year PhD student in Bioinformatics at Shanghai Jiao Tong University. My research focuses on applying artificial intelligence to the design and optimization of proteins, enzymes, and antibodies.
   </p>
   <p>
-    Currently, I focus on the following research topics: Drug discovery, Protein engineering.
+    I used to be a dedicated distance runner, with a personal best of 19 minutes for the 5K. I completed my first half-marathon in Shangyu, Shaoxing. More recently, I have developed a strong interest in strength training—especially deadlifts.
+  </p>
+  <p>
+    Outside of research and training, I enjoy spending time outdoors and connecting with people. I also have a cat named Panghu (胖虎), who brings plenty of fun to my everyday life.
   </p>
 
-portrait_url: /assets/images/photos/photo1.jpg
-portrait_caption: >-
-  Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
+portrait_url: /assets/images/photos/hong-tan-outdoors.jpg
 
 education:
-# - name: Massachusetts Institute of Technology
-#   logo: /assets/images/badges/MIT_Social_circle.png
-#   position: >- 
-#     Department of Electrical Engineering and Computer Science <br/>
-#     Ph.D. Student
-#   date: Sep. 2024 - present
+- name: Shanghai Jiao Tong University
+  logo: /assets/images/badges/sjtu.png
+  position: Ph.D. in Bioinformatics
+  date: Sep. 2026 - Present
 - name: Shanghai Jiao Tong University
   logo: /assets/images/badges/sjtu.png
   position: M.S. in Bioinformatics
   date: Sep. 2023 - Jul. 2026
-
-# experience:
-# - name: Peking University
-#   logo: /assets/images/badges/PKU_red.png
-#   position: Research Intern
-#   date: Sep. 2019 - Jul. 2021
+- name: Huazhong Agricultural University
+  logo: /assets/images/badges/hzau.png
+  position: B.S. in Bioinformatics
+  date: Sep. 2019 - Jun. 2023
 
 awards:
+- name: Outstanding Graduate, Shanghai Jiao Tong University
+  date: 2026
+- name: National Scholarship
+  date: 2025
 - name: Shanghai Jiao Tong University Excellence Scholarship
   date: 2024
-# - name: Award Name 1 
-#   date: 2021
-# - name: A quick brown fox jumps over the lazy dog and runs away award
-#   date: 2021

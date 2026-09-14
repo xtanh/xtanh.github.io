@@ -1,0 +1,24 @@
+<div class="my-3 bg-white shadow-sm rounded-sm">
+    <h6 class="p-3 mb-0 border-bottom border-gray">
+        <i class="fas fa-pen-nib"></i> Blog
+        <a href="{{ '/blog/' | relative_url }}">(view all <i class="fas fa-angle-double-right"></i>)</a>
+    </h6>
+    {% if site.posts.size > 0 %}
+    <div class="px-3 pb-1">
+        {% for post in site.posts limit:include.limit %}
+        <div class="d-flex py-2 {% unless forloop.last %}border-bottom border-gray{% endunless %}">
+            <div class="mr-3 text-muted no-break"><i>{{ post.date | date: "%b %d, %Y" }}</i></div>
+            <div>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                {% if post.description %}<div class="small text-muted">{{ post.description }}</div>{% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="p-3 text-muted">
+        Research notes and learning logs will appear here.
+        <a href="{{ '/blog/' | relative_url }}">About this blog</a>
+    </div>
+    {% endif %}
+</div>

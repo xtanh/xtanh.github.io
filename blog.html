@@ -1,0 +1,42 @@
+---
+layout: default
+title: Blog
+description: Research notes and learning logs by Hong Tan.
+navbar_title: Blog
+permalink: /blog/
+---
+
+<div class="row">
+    <div class="col">
+        <div class="card border-0 shadow-sm bg-white">
+            <div class="card-body p-4 p-md-5">
+                <h1 class="h2 mb-3">Blog</h1>
+                <p class="text-muted mb-4">Research notes, learning logs, and records of things worth remembering.</p>
+
+                {% if site.posts.size > 0 %}
+                    {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+                    {% for year in posts_by_year %}
+                    <h2 class="h5 mt-4 mb-2">{{ year.name }}</h2>
+                    <div class="list-group list-group-flush border-top">
+                        {% for post in year.items %}
+                        <a class="list-group-item list-group-item-action px-0 py-3" href="{{ post.url | relative_url }}">
+                            <div class="d-flex w-100 justify-content-between">
+                                <strong>{{ post.title }}</strong>
+                                <small class="text-muted ml-3 no-break">{{ post.date | date: "%b %d" }}</small>
+                            </div>
+                            {% if post.description %}<div class="small text-muted mt-1">{{ post.description }}</div>{% endif %}
+                            {% if post.tags %}<div class="mt-2">{% for tag in post.tags %}<span class="badge badge-light mr-1">{{ tag }}</span>{% endfor %}</div>{% endif %}
+                        </a>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                {% else %}
+                <div class="border-top pt-4">
+                    <p class="mb-2">No posts yet.</p>
+                    <p class="text-muted mb-0">I plan to use this space for research notes and learning logs.</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

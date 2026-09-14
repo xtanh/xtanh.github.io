@@ -13,7 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+title: Hong Tan
+description: Personal academic website of Hong Tan, focusing on AI-driven protein, enzyme, and antibody design and optimization.
+url: "https://xtanh.github.io"
 baseurl: "" # the subpath of your site, e.g. /blog
+lang: en
 
 # Build settings
 markdown: kramdown
@@ -32,9 +36,27 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-# timezone: Asia/Shanghai
+timezone: Asia/Shanghai
+
+# Blog posts are written in _posts and published under /blog/.
+permalink: /blog/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Hong Tan
+
+# Optional privacy-friendly analytics. Add a real Website ID before enabling.
+analytics:
+  enabled: false
+  provider: umami
+  script_url: "https://cloud.umami.is/script.js"
+  website_id: ""
+  domain: "xtanh.github.io"
 
 collections:
   - publications
   - news
-  - showcase

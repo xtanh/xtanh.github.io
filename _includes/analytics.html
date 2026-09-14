@@ -1,0 +1,8 @@
+{% if site.analytics.enabled and site.analytics.provider == "umami" and site.analytics.website_id != "" %}
+<script
+  defer
+  src="{{ site.analytics.script_url }}"
+  data-website-id="{{ site.analytics.website_id }}"
+  data-domains="{{ site.analytics.domain }}"
+  data-exclude-search="true"></script>
+{% endif %}
