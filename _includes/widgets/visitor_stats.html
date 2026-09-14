@@ -1,0 +1,29 @@
+{% assign analytics_share_slug = site.analytics.share_url | split: '/' | last %}
+<div
+    id="visitor-statistics"
+    class="my-3 bg-white shadow-sm rounded-sm"
+    data-share-slug="{{ analytics_share_slug }}"
+    data-api-base="https://gateway-us.umami.is/api">
+    <h6 class="p-3 mb-0 border-bottom border-gray">
+        <i class="fas fa-earth-asia" aria-hidden="true"></i> Visitors
+    </h6>
+    <div class="p-3">
+        <div class="visitor-summary">
+            <div class="visitor-total">
+                <div class="visitor-count" data-visitor-count aria-live="polite">—</div>
+                <div class="small text-muted mt-1">Total visitors</div>
+            </div>
+            <div class="visitor-map-wrap">
+                <div class="visitor-map-canvas" aria-label="Approximate visitor locations on a world map">
+                    <img src="{{ '/assets/images/world-map.svg' | relative_url }}" alt="" aria-hidden="true">
+                    <div data-visitor-markers></div>
+                </div>
+                <div class="visitor-location-summary small text-muted mt-1" data-visitor-locations aria-live="polite">
+                    Loading visitor locations…
+                </div>
+            </div>
+        </div>
+        <noscript><div class="small text-muted mt-2">Enable JavaScript to view visitor statistics.</div></noscript>
+    </div>
+</div>
+<script src="{{ '/assets/js/visitor_stats.js' | relative_url }}" defer></script>

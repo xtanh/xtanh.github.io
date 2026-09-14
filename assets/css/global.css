@@ -103,16 +103,71 @@ div.lazy {
     border-left: 3px solid #dee2e6;
 }
 
-.analytics-frame {
-    display: block;
-    width: 100%;
-    min-height: 900px;
-    border: 0;
-    background: #fff;
+.visitor-summary {
+    display: grid;
+    grid-template-columns: minmax(120px, 0.35fr) minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: center;
 }
 
-@media (max-width: 767.98px) {
-    .analytics-frame {
-        min-height: 1100px;
+.visitor-total {
+    padding-right: 1.5rem;
+    border-right: 1px solid #e9ecef;
+}
+
+.visitor-count {
+    color: #343a40;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.visitor-map-wrap {
+    width: 100%;
+    max-width: 440px;
+    margin-left: auto;
+}
+
+.visitor-map-canvas {
+    position: relative;
+    width: 100%;
+}
+
+.visitor-map-canvas > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.visitor-map-marker {
+    position: absolute;
+    width: var(--marker-size, 9px);
+    height: var(--marker-size, 9px);
+    border: 2px solid rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    background: #007bff;
+    box-shadow: 0 0 0 1px rgba(0, 123, 255, 0.25);
+    transform: translate(-50%, -50%);
+}
+
+.visitor-location-summary {
+    min-height: 1.25rem;
+}
+
+@media (max-width: 575.98px) {
+    .visitor-summary {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .visitor-total {
+        padding-right: 0;
+        padding-bottom: 1rem;
+        border-right: 0;
+        border-bottom: 1px solid #e9ecef;
+    }
+
+    .visitor-map-wrap {
+        margin-left: 0;
     }
 }
