@@ -49,12 +49,12 @@ defaults:
       layout: post
       author: Hong Tan
 
-# Optional privacy-friendly analytics. Add a real Website ID before enabling.
+# Privacy-friendly analytics powered by Umami.
 analytics:
-  enabled: false
+  enabled: true
   provider: umami
   script_url: "https://cloud.umami.is/script.js"
-  website_id: ""
+  website_id: "393f80fb-21e8-4579-be13-a0802c4c8320"
   domain: "xtanh.github.io"
 
 collections:
