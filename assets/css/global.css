@@ -68,6 +68,33 @@ div.lazy {
 }
 
 /* Blog posts use the same card-based visual language as the original site. */
+.blog-article {
+    max-width: 960px;
+    margin: 0 auto;
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.blog-article header h1 { font-size: clamp(1.55rem, 3vw, 2rem); line-height: 1.4; }
+.blog-article header .lead { font-size: 1.05rem; line-height: 1.8; }
+.blog-content h2 { font-size: 1.5rem; padding-bottom: .6rem; border-bottom: 1px solid #e9ecef; }
+.blog-content h3 { font-size: 1.22rem; }
+.blog-content h4 { font-size: 1.08rem; margin-top: 1.5rem; }
+.blog-content h2, .blog-content h3, .blog-content h4 { scroll-margin-top: 6rem; line-height: 1.5; }
+.blog-content p { margin-bottom: 1.1rem; }
+.blog-content li { margin: .3rem 0; }
+.blog-content table { font-size: .92rem; line-height: 1.65; }
+.blog-content tbody tr:nth-child(even) { background: #fafbfc; }
+.blog-toc { margin: 1.8rem 0; padding: 1rem 1.3rem; background: #f8f9fa; border-left: 3px solid #ced4da; font-size: .95rem; }
+.blog-toc summary { cursor: pointer; font-weight: 700; }
+.blog-toc > ul { margin: .75rem 0 0; padding-left: 1.3rem; }
+.blog-toc ul ul ul { display: none; }
+.blog-tag-filters { display: flex; flex-wrap: wrap; gap: .5rem; }
+[data-blog-post][hidden], [data-blog-year][hidden] { display: none !important; }
+@media (max-width: 575.98px) {
+    .blog-article > .card-body { padding: 1.25rem !important; }
+    .blog-content table { font-size: .85rem; }
+}
+
 .blog-content {
     font-size: 1.05rem;
     line-height: 1.8;
@@ -101,6 +128,40 @@ div.lazy {
     padding-left: 1rem;
     color: #6c757d;
     border-left: 3px solid #dee2e6;
+}
+
+.blog-content table {
+    display: block;
+    width: 100%;
+    margin: 1.25rem 0;
+    overflow-x: auto;
+    border-collapse: collapse;
+}
+
+.blog-content th,
+.blog-content td {
+    padding: 0.55rem 0.7rem;
+    vertical-align: top;
+    border: 1px solid #dee2e6;
+}
+
+.blog-content th {
+    background: #f8f9fa;
+    white-space: nowrap;
+}
+
+.blog-content figure {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.blog-content figcaption {
+    line-height: 1.5;
+}
+
+.blog-content .katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .visitor-summary {

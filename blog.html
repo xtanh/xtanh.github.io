@@ -14,12 +14,21 @@ permalink: /blog/
                 <p class="text-muted mb-4">Research notes, learning logs, and records of things worth remembering.</p>
 
                 {% if site.posts.size > 0 %}
+                    <div class="blog-tag-filters mb-4" aria-label="Filter by topic">
+                        <button type="button" class="btn btn-sm btn-outline-secondary active" data-blog-tag="" aria-pressed="true">All</button>
+                        {% assign sorted_tags = site.tags | sort %}
+                        {% for tag in sorted_tags %}
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-blog-tag="{{ tag[0] | escape }}" aria-pressed="false">{{ tag[0] | escape }} <span class="small">({{ tag[1].size }})</span></button>
+                        {% endfor %}
+                    </div>
+                    <p id="blog-filter-status" class="small text-muted" role="status"></p>
                     {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
                     {% for year in posts_by_year %}
+                    <section data-blog-year>
                     <h2 class="h5 mt-4 mb-2">{{ year.name }}</h2>
                     <div class="list-group list-group-flush border-top">
                         {% for post in year.items %}
-                        <a class="list-group-item list-group-item-action px-0 py-3" href="{{ post.url | relative_url }}">
+                        <a class="list-group-item list-group-item-action px-0 py-3" data-blog-post data-tags="{{ post.tags | jsonify | escape }}" href="{{ post.url | relative_url }}">
                             <div class="d-flex w-100 justify-content-between">
                                 <strong>{{ post.title }}</strong>
                                 <small class="text-muted ml-3 no-break">{{ post.date | date: "%b %d" }}</small>
@@ -29,6 +38,7 @@ permalink: /blog/
                         </a>
                         {% endfor %}
                     </div>
+                    </section>
                     {% endfor %}
                 {% else %}
                 <div class="border-top pt-4">
@@ -40,3 +50,4 @@ permalink: /blog/
         </div>
     </div>
 </div>
+<script src="{{ '/assets/js/blog_filters.js' | relative_url }}" defer></script>
