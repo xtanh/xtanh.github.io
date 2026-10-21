@@ -1,5 +1,5 @@
 ---
-title: "PIEPIE: Generalizing Perturbation Effects across Unseen Perturbations, Contexts and Datasets"
+title: "PIE: Generalizing Perturbation Effects across Unseen Perturbations, Contexts and Datasets"
 description: 从 Perturb-seq 的实验限制出发，理解 PIE 如何直接预测细胞群体层面的扰动效应，并泛化到未见过的扰动、细胞背景和数据集。
 category: Paper notes
 date: 2026-10-19 00:00:00 +0800
